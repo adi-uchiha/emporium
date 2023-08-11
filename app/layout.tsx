@@ -3,10 +3,7 @@ import './globals.css'
 import { Inter } from 'next/font/google'
 import { ModalProvider } from '@/providers/modal-provider'
 
-const inter = Inter({ subsets: ['latin'],
-display: 'swap'
-
-})
+const inter = Inter({ subsets: ['latin'],})
 
 export const metadata = {
   title: 'Emporium Admin DashBoard',
