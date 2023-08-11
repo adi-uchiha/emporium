@@ -1,10 +1,21 @@
-import { Button } from "@/components/ui/button";
+"use client";
+
+import { useStoreModal } from "@/hooks/use-store-model";
+import { useEffect } from "react";
 
 export default function Home() {
-  return (
+  const onOpen = useStoreModal((state)=> state.onOpen)
+  const isOpen = useStoreModal((state)=> state.isOpen)
 
+  useEffect(()=> {
+    if(!isOpen) {
+      onOpen();
+    }
+  }, [isOpen, onOpen])
+
+  return (
     <div className="p-4">
-      <Button size={"lg"} variant={"destructive"}>Click</Button>
+      Root Page
     </div>
   )
 }
