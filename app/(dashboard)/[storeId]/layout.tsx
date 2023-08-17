@@ -6,7 +6,7 @@ import NavBar from '@/components/Navbar';
 
 export default async function DashboardLayout({
   children,
-  params
+  params 
 }: {
   children: React.ReactNode
   params: { storeId: string }
